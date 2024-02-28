@@ -13,10 +13,18 @@ Copy it to a file and upload the file into ChatGPT or assistants with retrievals
 
 # FIM tokens? How does it work?
 https://youtu.be/Uo53gAUkZKE?t=304
+
 TL;DW: It's very similar to early days of SQL injection. Everything is a string and OpenAI does not sanitize model inputs.
 If a tool call (retrieval, web search etc.) returns a string that contains an "escape character" (special prompt boundary tokens) model sees it as multiple prompts, even ones with "system" role.
 For a deeper understanding check out this excellent tokenization video by Andrej Karpathy:
+
 https://youtu.be/zduSFxRajkE
+
+Here are some other links you may find useful:
+
+https://tiktokenizer.vercel.app
+
+https://github.com/openai/tiktoken/blob/1b9faf2779855124f05174adf1383e53689ed94b/tiktoken_ext/openai_public.py#L76
 
 # Workarounds
 If you build your own RAG/retrievals/tools_call based systems, the only workaround I see is filtering out all FIM strings in call results you submit back to the model.
