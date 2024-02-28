@@ -20,4 +20,7 @@ https://youtu.be/zduSFxRajkE
 
 # Workarounds
 If you build your own RAG/retrievals/tools_call based systems, the only workaround I see is filtering out all FIM strings in call results you submit back to the model.
-If you use OpenAI assistants API / retrievals directly, you're screwed. A fix can only be implemented by OpenAI. This also works in ChatGPT so beware of clicking any links that model shows you after a web search. They can easily be hostile. I repored the vulnerability through BugCrowd but nobody was interested.
+
+If you use OpenAI assistants API / retrievals directly, you're screwed. A fix can only be implemented by OpenAI. 
+
+This also works in ChatGPT so beware of clicking any links that model shows you after a web search. They can easily be hostile. I reported the vulnerability through BugCrowd but nobody was interested.
