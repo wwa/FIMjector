@@ -15,7 +15,7 @@ Copy it to a file and upload the file into ChatGPT or assistants with retrievals
 https://youtu.be/Uo53gAUkZKE?t=304
 
 TL;DW: It's very similar to early days of SQL injection. Everything is a string and OpenAI does not sanitize model inputs.
-If a tool call (retrieval, web search etc.) returns a string that contains an "escape character" (special prompt boundary tokens) model sees it as multiple prompts, even ones with "system" role.
+If a tool call (retrieval, web search etc.) returns a string that contains an "escape sequence" - a string that tokenizes to special prompt boundary tokens, then model sees it as multiple prompts, possibly "system" role prompts.
 For a deeper understanding check out this excellent tokenization video by Andrej Karpathy:
 
 https://youtu.be/zduSFxRajkE
